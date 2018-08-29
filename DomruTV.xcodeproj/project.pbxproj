@@ -80,6 +80,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66813BAA21373AA300CBBE46 /* Build configuration list for PBXNativeTarget "DomruTV" */;
 			buildPhases = (
+				66813BB12137416900CBBE46 /* SwiftLint */,
 				66813B9721373AA200CBBE46 /* Sources */,
 				66813B9821373AA200CBBE46 /* Frameworks */,
 				66813B9921373AA200CBBE46 /* Resources */,
@@ -155,6 +156,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		66813BB12137416900CBBE46 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
