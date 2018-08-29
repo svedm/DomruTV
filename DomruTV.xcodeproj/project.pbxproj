@@ -11,6 +11,7 @@
 		66813BA121373AA200CBBE46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66813BA021373AA200CBBE46 /* ViewController.swift */; };
 		66813BA421373AA200CBBE46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66813BA221373AA200CBBE46 /* Main.storyboard */; };
 		66813BA621373AA300CBBE46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66813BA521373AA300CBBE46 /* Assets.xcassets */; };
+		66813BAF21373F0100CBBE46 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66813BAE21373F0100CBBE46 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		66813BA321373AA200CBBE46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66813BA521373AA300CBBE46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66813BA721373AA300CBBE46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66813BAE21373F0100CBBE46 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/tvOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66813BAF21373F0100CBBE46 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +41,7 @@
 			children = (
 				66813B9D21373AA200CBBE46 /* DomruTV */,
 				66813B9C21373AA200CBBE46 /* Products */,
+				66813BAD21373F0100CBBE46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +65,14 @@
 			path = DomruTV;
 			sourceTree = "<group>";
 		};
+		66813BAD21373F0100CBBE46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66813BAE21373F0100CBBE46 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +83,7 @@
 				66813B9721373AA200CBBE46 /* Sources */,
 				66813B9821373AA200CBBE46 /* Frameworks */,
 				66813B9921373AA200CBBE46 /* Resources */,
+				66813BB021373F2A00CBBE46 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -125,6 +138,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		66813BB021373F2A00CBBE46 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/tvOS/Alamofire.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		66813B9721373AA200CBBE46 /* Sources */ = {
@@ -269,6 +301,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6WCU73Y7FL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = DomruTV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -288,6 +324,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6WCU73Y7FL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = DomruTV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
