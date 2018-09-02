@@ -22,4 +22,11 @@ class ChannelCollectionViewCell: UICollectionViewCell {
         selectedBackgroundView?.backgroundColor = .lightGray
         layer.cornerRadius = 15
     }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+
+        label.text = nil
+        imageView.image = nil
+    }
 }
