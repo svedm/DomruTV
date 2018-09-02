@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13122.16" systemVersion="17A278a" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DomruTV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,9 +21,64 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dgh-kD-Tgl">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="deA-gD-21O">
+                                    <size key="itemSize" width="365" height="327"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChannelCollectionViewCell" id="QTA-Ge-ZSg" customClass="ChannelCollectionViewCell" customModule="DomruTV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1IS-V3-YPl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="226"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mk-nk-CEd">
+                                                    <rect key="frame" x="20" y="234" width="260" height="46"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="3Mk-nk-CEd" firstAttribute="top" secondItem="1IS-V3-YPl" secondAttribute="bottom" constant="8" id="1jO-9v-Tnq"/>
+                                            <constraint firstItem="1IS-V3-YPl" firstAttribute="top" secondItem="QTA-Ge-ZSg" secondAttribute="top" id="3Ox-Oe-yMr"/>
+                                            <constraint firstItem="1IS-V3-YPl" firstAttribute="leading" secondItem="QTA-Ge-ZSg" secondAttribute="leading" id="6r8-g0-fs6"/>
+                                            <constraint firstAttribute="trailing" secondItem="3Mk-nk-CEd" secondAttribute="trailing" constant="20" id="GE1-tV-UKB"/>
+                                            <constraint firstItem="3Mk-nk-CEd" firstAttribute="leading" secondItem="QTA-Ge-ZSg" secondAttribute="leading" constant="20" id="MhI-Uh-uws"/>
+                                            <constraint firstAttribute="bottom" secondItem="3Mk-nk-CEd" secondAttribute="bottom" constant="20" id="bbH-pR-RCv"/>
+                                            <constraint firstAttribute="trailing" secondItem="1IS-V3-YPl" secondAttribute="trailing" id="jgP-gY-cTv"/>
+                                        </constraints>
+                                        <size key="customSize" width="300" height="300"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="1IS-V3-YPl" id="cTT-8n-ITZ"/>
+                                            <outlet property="label" destination="3Mk-nk-CEd" id="Ebd-3S-Khw"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dgh-kD-Tgl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8Os-st-2Gd"/>
+                            <constraint firstAttribute="bottom" secondItem="dgh-kD-Tgl" secondAttribute="bottom" id="qFz-O0-no8"/>
+                            <constraint firstItem="dgh-kD-Tgl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ti0-q5-Mkf"/>
+                            <constraint firstAttribute="trailing" secondItem="dgh-kD-Tgl" secondAttribute="trailing" id="y5K-Rw-8Xh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="dgh-kD-Tgl" id="43o-Ks-SZy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

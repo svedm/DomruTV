@@ -15,6 +15,8 @@
 		66813B9F21373AA200CBBE46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66813B9E21373AA200CBBE46 /* AppDelegate.swift */; };
 		66813BA621373AA300CBBE46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66813BA521373AA300CBBE46 /* Assets.xcassets */; };
 		66813BAF21373F0100CBBE46 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66813BAE21373F0100CBBE46 /* Alamofire.framework */; };
+		66CA675C213C45580021E6B5 /* ChannelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CA675B213C45580021E6B5 /* ChannelCollectionViewCell.swift */; };
+		66CA675E213C48CE0021E6B5 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CA675D213C48CE0021E6B5 /* AlamofireImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		66813BA521373AA300CBBE46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66813BA721373AA300CBBE46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66813BAE21373F0100CBBE46 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/tvOS/Alamofire.framework; sourceTree = "<group>"; };
+		66CA675B213C45580021E6B5 /* ChannelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCollectionViewCell.swift; sourceTree = "<group>"; };
+		66CA675D213C48CE0021E6B5 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/tvOS/AlamofireImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66813BAF21373F0100CBBE46 /* Alamofire.framework in Frameworks */,
+				66CA675E213C48CE0021E6B5 /* AlamofireImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +69,7 @@
 			children = (
 				4EAFD4944542FFCFC757D199 /* ViewController.swift */,
 				4EAFD1F1E91ADFAA246EBA40 /* Main.storyboard */,
+				66CA675B213C45580021E6B5 /* ChannelCollectionViewCell.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -125,6 +131,7 @@
 		66813BAD21373F0100CBBE46 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				66CA675D213C48CE0021E6B5 /* AlamofireImage.framework */,
 				66813BAE21373F0100CBBE46 /* Alamofire.framework */,
 			);
 			name = Frameworks;
@@ -205,10 +212,12 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/tvOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/tvOS/AlamofireImage.framework",
 			);
 			name = Carthage;
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -235,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66CA675C213C45580021E6B5 /* ChannelCollectionViewCell.swift in Sources */,
 				66813B9F21373AA200CBBE46 /* AppDelegate.swift in Sources */,
 				4EAFD9E17C1C4DF95F13D0A0 /* URL+Required.swift in Sources */,
 				4EAFD1E7B367A658CD133E96 /* ViewController.swift in Sources */,
