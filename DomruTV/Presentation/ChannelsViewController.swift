@@ -10,6 +10,7 @@ import UIKit
 import AVKit
 
 class ChannelsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private var collectionView: UICollectionView!
     private var channelsService: ChannelsService!
     private var data: [ChannelsResponse.Channel] = []
@@ -23,10 +24,12 @@ class ChannelsViewController: UIViewController, UICollectionViewDelegate, UIColl
         channelsService = ChannelsService(apiClient: apiClient)
 
         if !authService.isAuthorized {
-            authService.login { result in
+            activityIndicator.isHidden = false
+            authService.login { [weak self] result in
+                self?.activityIndicator.isHidden = true
                 switch result {
                     case .success:
-                        self.loadData()
+                        self?.loadData()
                     case .error(let error):
                         print(error.localizedDescription)
                 }
@@ -40,7 +43,9 @@ class ChannelsViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
 
     private func loadData() {
+        activityIndicator.isHidden = false
         channelsService.getChannelsList { [weak self] result in
+            self?.activityIndicator.isHidden = true
             switch result {
                 case .success(let data):
                     self?.data = data.items
@@ -78,7 +83,9 @@ class ChannelsViewController: UIViewController, UICollectionViewDelegate, UIColl
         let channel = data[indexPath.item]
         guard let resourceId = channel.resources.first(where: { $0.type == .hls })?.id else { return }
 
+        activityIndicator.isHidden = false
         channelsService.getChannelURL(channelId: channel.id, resourceId: resourceId) { [weak self] result in
+            self?.activityIndicator.isHidden = true
             switch result {
                 case .success(let url):
                     self?.showChannel(url: url)

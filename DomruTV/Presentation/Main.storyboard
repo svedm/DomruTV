@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="76h-Tp-K3P">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
@@ -10,10 +10,75 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Auth View Controller-->
+        <scene sceneID="6r2-8V-Fus">
+            <objects>
+                <viewController storyboardIdentifier="AuthViewController" id="76h-Tp-K3P" customClass="AuthViewController" customModule="DomruTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8H4-7v-nHS"/>
+                        <viewControllerLayoutGuide type="bottom" id="7NY-Ru-YAo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ceq-O8-y53">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1DT-x7-oiz">
+                                <rect key="frame" x="760" y="403" width="400" height="274"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UNT-4S-H2n">
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="86"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wUI-IX-LVe">
+                                        <rect key="frame" x="0.0" y="94" width="400" height="86"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qb4-Qr-AkH">
+                                        <rect key="frame" x="0.0" y="188" width="400" height="86"/>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <state key="normal" title="Sign in"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="CXc-eI-aEh"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DomruTV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Iy-fN-qTo">
+                                <rect key="frame" x="810" y="288" width="301" height="91"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="1DT-x7-oiz" firstAttribute="top" secondItem="6Iy-fN-qTo" secondAttribute="bottom" constant="24" id="Knw-2Y-2QT"/>
+                            <constraint firstItem="1DT-x7-oiz" firstAttribute="centerY" secondItem="ceq-O8-y53" secondAttribute="centerY" id="UMT-Bp-09O"/>
+                            <constraint firstItem="6Iy-fN-qTo" firstAttribute="centerX" secondItem="ceq-O8-y53" secondAttribute="centerX" id="a84-hK-nUA"/>
+                            <constraint firstItem="1DT-x7-oiz" firstAttribute="centerX" secondItem="ceq-O8-y53" secondAttribute="centerX" id="gai-yt-UZa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mAB-HR-gOH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VXR-o6-vZb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2515" y="1161"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="Xoc-ay-gL0">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="IXj-1c-1Sj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3z5-Wc-Bo4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1638" y="2576"/>
+        </scene>
+        <!--Channels View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ChannelsViewController" customModule="DomruTV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChannelsViewController" id="BYZ-38-t0r" customClass="ChannelsViewController" customModule="DomruTV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -66,22 +131,30 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="RPi-rq-m4d">
+                                <rect key="frame" x="928" y="508" width="64" height="64"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="RPi-rq-m4d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="21g-Ot-eNP"/>
                             <constraint firstItem="dgh-kD-Tgl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8Os-st-2Gd"/>
                             <constraint firstAttribute="bottom" secondItem="dgh-kD-Tgl" secondAttribute="bottom" id="qFz-O0-no8"/>
                             <constraint firstItem="dgh-kD-Tgl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ti0-q5-Mkf"/>
+                            <constraint firstItem="RPi-rq-m4d" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="y0o-n5-kzn"/>
                             <constraint firstAttribute="trailing" secondItem="dgh-kD-Tgl" secondAttribute="trailing" id="y5K-Rw-8Xh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="RPi-rq-m4d" id="gQq-LK-SV7"/>
                         <outlet property="collectionView" destination="dgh-kD-Tgl" id="43o-Ks-SZy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="71" y="1161"/>
         </scene>
     </scenes>
 </document>
