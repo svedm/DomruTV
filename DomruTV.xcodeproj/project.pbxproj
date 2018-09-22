@@ -10,23 +10,28 @@
 		4EAFD185B526C12F9A2C7521 /* ResourceURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD7AFA841D376AAB87973 /* ResourceURL.swift */; };
 		4EAFD1E7B367A658CD133E96 /* ChannelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD4944542FFCFC757D199 /* ChannelsViewController.swift */; };
 		4EAFD25F3F460E46A15932DA /* DomruAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD2EB8495A5B7EF203B9E /* DomruAPIResponse.swift */; };
-		4EAFD53C40193242F3B30ABA /* DomruAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFDCDE499B71797367CDFE /* DomruAPIClient.swift */; };
 		4EAFD5C5347BAF54F6A42E80 /* ChannelsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFDF90274FE72F7C7023E3 /* ChannelsResponse.swift */; };
-		4EAFD7690FD7D8B4D4BB20C1 /* ChannelsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFDB6DF9D0E8660B73AC00 /* ChannelsService.swift */; };
 		4EAFD9E17C1C4DF95F13D0A0 /* URL+Required.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD1960D988B4BBED7B160 /* URL+Required.swift */; };
 		4EAFDB9B1F7183CEF46C403E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EAFD1F1E91ADFAA246EBA40 /* Main.storyboard */; };
 		4EAFDBA808CA83BD00A19538 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD2DCFD06C12B68665703 /* AppConstants.swift */; };
-		4EAFDC17187900B41CCF6728 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFDE52E719D4B56771BD60 /* AuthService.swift */; };
 		4EAFDCB3C2037C9D549C0947 /* Alamofire+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD2D7440A33A6CC2ED331 /* Alamofire+Codable.swift */; };
 		4EAFDE6C4897FC3CC7F6EB20 /* DomruTVError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD8AC766E360A4B44A093 /* DomruTVError.swift */; };
 		4EAFDEA15FF652A000243E27 /* DeviceTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD03FD5C209EAE2BDE0D2 /* DeviceTokenResponse.swift */; };
-		4EAFDEDABC9F01D52AB92A51 /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD51AC886E36A5A3AF9C4 /* SettingsService.swift */; };
+		4EAFDEDABC9F01D52AB92A51 /* UserDefaultsSettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD51AC886E36A5A3AF9C4 /* UserDefaultsSettingsService.swift */; };
 		4EAFDFAC434EB7D7D66A18D7 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD90B5F3A6D90CB19F1AC /* AuthResponse.swift */; };
 		4EAFDFADDEB7BBF1DAD22A03 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD69BDE1B9DA02BDA4481 /* Result.swift */; };
 		66813B9F21373AA200CBBE46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66813B9E21373AA200CBBE46 /* AppDelegate.swift */; };
 		66813BA621373AA300CBBE46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66813BA521373AA300CBBE46 /* Assets.xcassets */; };
 		66813BAF21373F0100CBBE46 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66813BAE21373F0100CBBE46 /* Alamofire.framework */; };
 		66AF87F7213C8598009AF52C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF87F6213C8598009AF52C /* AuthViewController.swift */; };
+		66BA605921566C550046AE0E /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66BA605821566C550046AE0E /* Auth.storyboard */; };
+		66BA605B215685450046AE0E /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BA605A215685450046AE0E /* AuthService.swift */; };
+		66BA605D215685530046AE0E /* NetworkAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BA605C215685530046AE0E /* NetworkAuthService.swift */; };
+		66BA6060215687B10046AE0E /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BA605F215687B10046AE0E /* SettingsService.swift */; };
+		66BA6063215688270046AE0E /* ChannelsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BA6062215688270046AE0E /* ChannelsService.swift */; };
+		66BA6065215688330046AE0E /* NetworkChannelsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BA6064215688330046AE0E /* NetworkChannelsService.swift */; };
+		66BA6068215689780046AE0E /* RESTAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BA6067215689780046AE0E /* RESTAPIClient.swift */; };
+		66BA606A215689910046AE0E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BA6069215689910046AE0E /* APIClient.swift */; };
 		66CA675C213C45580021E6B5 /* ChannelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CA675B213C45580021E6B5 /* ChannelCollectionViewCell.swift */; };
 		66CA675E213C48CE0021E6B5 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CA675D213C48CE0021E6B5 /* AlamofireImage.framework */; };
 /* End PBXBuildFile section */
@@ -39,14 +44,11 @@
 		4EAFD2DCFD06C12B68665703 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		4EAFD2EB8495A5B7EF203B9E /* DomruAPIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomruAPIResponse.swift; sourceTree = "<group>"; };
 		4EAFD4944542FFCFC757D199 /* ChannelsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsViewController.swift; sourceTree = "<group>"; };
-		4EAFD51AC886E36A5A3AF9C4 /* SettingsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
+		4EAFD51AC886E36A5A3AF9C4 /* UserDefaultsSettingsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsSettingsService.swift; sourceTree = "<group>"; };
 		4EAFD69BDE1B9DA02BDA4481 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		4EAFD7AFA841D376AAB87973 /* ResourceURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceURL.swift; sourceTree = "<group>"; };
 		4EAFD8AC766E360A4B44A093 /* DomruTVError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomruTVError.swift; sourceTree = "<group>"; };
 		4EAFD90B5F3A6D90CB19F1AC /* AuthResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
-		4EAFDB6DF9D0E8660B73AC00 /* ChannelsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsService.swift; sourceTree = "<group>"; };
-		4EAFDCDE499B71797367CDFE /* DomruAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomruAPIClient.swift; sourceTree = "<group>"; };
-		4EAFDE52E719D4B56771BD60 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		4EAFDF90274FE72F7C7023E3 /* ChannelsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsResponse.swift; sourceTree = "<group>"; };
 		66813B9B21373AA200CBBE46 /* DomruTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DomruTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66813B9E21373AA200CBBE46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 		66813BA721373AA300CBBE46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66813BAE21373F0100CBBE46 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/tvOS/Alamofire.framework; sourceTree = "<group>"; };
 		66AF87F6213C8598009AF52C /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		66BA605821566C550046AE0E /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		66BA605A215685450046AE0E /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		66BA605C215685530046AE0E /* NetworkAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAuthService.swift; sourceTree = "<group>"; };
+		66BA605F215687B10046AE0E /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
+		66BA6062215688270046AE0E /* ChannelsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsService.swift; sourceTree = "<group>"; };
+		66BA6064215688330046AE0E /* NetworkChannelsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkChannelsService.swift; sourceTree = "<group>"; };
+		66BA6067215689780046AE0E /* RESTAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTAPIClient.swift; sourceTree = "<group>"; };
+		66BA6069215689910046AE0E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		66CA675B213C45580021E6B5 /* ChannelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCollectionViewCell.swift; sourceTree = "<group>"; };
 		66CA675D213C48CE0021E6B5 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/tvOS/AlamofireImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,9 +93,9 @@
 		4EAFD05CC56C494B5A700883 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				4EAFDE52E719D4B56771BD60 /* AuthService.swift */,
-				4EAFDB6DF9D0E8660B73AC00 /* ChannelsService.swift */,
-				4EAFD51AC886E36A5A3AF9C4 /* SettingsService.swift */,
+				66BA605E215685750046AE0E /* Auth */,
+				66BA6066215688610046AE0E /* Channels */,
+				66BA6061215687DA0046AE0E /* Settings */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -105,6 +115,7 @@
 				4EAFD1F1E91ADFAA246EBA40 /* Main.storyboard */,
 				66CA675B213C45580021E6B5 /* ChannelCollectionViewCell.swift */,
 				66AF87F6213C8598009AF52C /* AuthViewController.swift */,
+				66BA605821566C550046AE0E /* Auth.storyboard */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -135,7 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				4EAFDA6EC355302EEF4FE0DB /* Extensions */,
-				4EAFDCDE499B71797367CDFE /* DomruAPIClient.swift */,
+				66BA6069215689910046AE0E /* APIClient.swift */,
+				66BA6067215689780046AE0E /* RESTAPIClient.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -179,6 +191,33 @@
 				66813BAE21373F0100CBBE46 /* Alamofire.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66BA605E215685750046AE0E /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				66BA605A215685450046AE0E /* AuthService.swift */,
+				66BA605C215685530046AE0E /* NetworkAuthService.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		66BA6061215687DA0046AE0E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4EAFD51AC886E36A5A3AF9C4 /* UserDefaultsSettingsService.swift */,
+				66BA605F215687B10046AE0E /* SettingsService.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		66BA6066215688610046AE0E /* Channels */ = {
+			isa = PBXGroup;
+			children = (
+				66BA6062215688270046AE0E /* ChannelsService.swift */,
+				66BA6064215688330046AE0E /* NetworkChannelsService.swift */,
+			);
+			path = Channels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +282,7 @@
 			files = (
 				66813BA621373AA300CBBE46 /* Assets.xcassets in Resources */,
 				4EAFDB9B1F7183CEF46C403E /* Main.storyboard in Resources */,
+				66BA605921566C550046AE0E /* Auth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,19 +333,23 @@
 				4EAFD9E17C1C4DF95F13D0A0 /* URL+Required.swift in Sources */,
 				4EAFD1E7B367A658CD133E96 /* ChannelsViewController.swift in Sources */,
 				4EAFDCB3C2037C9D549C0947 /* Alamofire+Codable.swift in Sources */,
+				66BA606A215689910046AE0E /* APIClient.swift in Sources */,
+				66BA605D215685530046AE0E /* NetworkAuthService.swift in Sources */,
 				4EAFDBA808CA83BD00A19538 /* AppConstants.swift in Sources */,
+				66BA605B215685450046AE0E /* AuthService.swift in Sources */,
 				4EAFDFADDEB7BBF1DAD22A03 /* Result.swift in Sources */,
 				4EAFDE6C4897FC3CC7F6EB20 /* DomruTVError.swift in Sources */,
+				66BA6060215687B10046AE0E /* SettingsService.swift in Sources */,
 				4EAFD185B526C12F9A2C7521 /* ResourceURL.swift in Sources */,
 				4EAFDFAC434EB7D7D66A18D7 /* AuthResponse.swift in Sources */,
 				4EAFDEA15FF652A000243E27 /* DeviceTokenResponse.swift in Sources */,
 				4EAFD5C5347BAF54F6A42E80 /* ChannelsResponse.swift in Sources */,
+				66BA6068215689780046AE0E /* RESTAPIClient.swift in Sources */,
+				66BA6065215688330046AE0E /* NetworkChannelsService.swift in Sources */,
 				4EAFD25F3F460E46A15932DA /* DomruAPIResponse.swift in Sources */,
-				4EAFD53C40193242F3B30ABA /* DomruAPIClient.swift in Sources */,
-				4EAFDC17187900B41CCF6728 /* AuthService.swift in Sources */,
-				4EAFD7690FD7D8B4D4BB20C1 /* ChannelsService.swift in Sources */,
+				66BA6063215688270046AE0E /* ChannelsService.swift in Sources */,
 				66AF87F7213C8598009AF52C /* AuthViewController.swift in Sources */,
-				4EAFDEDABC9F01D52AB92A51 /* SettingsService.swift in Sources */,
+				4EAFDEDABC9F01D52AB92A51 /* UserDefaultsSettingsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

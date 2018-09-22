@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-class DomruAPIClient {
+class RESTAPIClient: APIClient {
     private var sessionManager: SessionManager
     private var deviceId: String
     private var jsonDecoder: JSONDecoder

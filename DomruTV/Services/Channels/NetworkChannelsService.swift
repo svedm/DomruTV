@@ -1,17 +1,17 @@
 //
-//  ChannelsService.swift
+//  NetworkChannelsService.swift
 //  DomruTV
 //
-//  Created by Svetoslav Karasev on 02/09/2018.
+//  Created by Svetoslav Karasev on 22/09/2018.
 //  Copyright © 2018 Svetoslav Karasev. All rights reserved.
 //
 
 import Foundation
 
-class ChannelsService {
-    private let apiClient: DomruAPIClient
+class NetworkChannelsService: ChannelsService {
+    private let apiClient: APIClient
 
-    init(apiClient: DomruAPIClient) {
+    init(apiClient: APIClient) {
         self.apiClient = apiClient
     }
 
@@ -22,7 +22,7 @@ class ChannelsService {
                     completion(.success(response.data))
                 case .error(let error):
                     completion(.error(error))
-            }
+                }
         }
     }
 
@@ -33,7 +33,7 @@ class ChannelsService {
                     completion(.success(response.url))
                 case .error(let error):
                     completion(.error(error))
-            }
+                }
         }
     }
 }

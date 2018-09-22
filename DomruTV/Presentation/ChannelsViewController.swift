@@ -12,16 +12,16 @@ import AVKit
 class ChannelsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private var collectionView: UICollectionView!
-    private var channelsService: ChannelsService!
+    private var channelsService: NetworkChannelsService!
     private var data: [ChannelsResponse.Channel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let settingsService = SettingsService()
-        let apiClient = DomruAPIClient(deviceId: AppConstants.deviceId, authToken: settingsService.authToken)
-        let authService = AuthService(apiClient: apiClient, settingService: settingsService)
-        channelsService = ChannelsService(apiClient: apiClient)
+        let settingsService = UserDefaultsSettingsService()
+        let apiClient = RESTAPIClient(deviceId: AppConstants.deviceId, authToken: settingsService.authToken)
+        let authService = NetworkAuthService(apiClient: apiClient, settingService: settingsService)
+        channelsService = NetworkChannelsService(apiClient: apiClient)
 
         if !authService.isAuthorized {
             activityIndicator.isHidden = false

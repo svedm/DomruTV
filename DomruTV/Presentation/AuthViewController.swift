@@ -8,8 +8,22 @@
 
 import UIKit
 
-class AuthViewController: UIViewController {
+class AuthViewController: UIViewController, UITextFieldDelegate {
+    @IBOutlet private var loginField: UITextField!
+    @IBOutlet private var passwordField: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        passwordField.delegate = self
+    }
+
+    @IBAction private func login() {
+        print("asd")
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        login()
+        return true
     }
 }

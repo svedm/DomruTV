@@ -1,21 +1,21 @@
 //
-//  AuthService.swift
+//  NetworkAuthService.swift
 //  DomruTV
 //
-//  Created by Svetoslav Karasev on 02/09/2018.
+//  Created by Svetoslav Karasev on 22/09/2018.
 //  Copyright © 2018 Svetoslav Karasev. All rights reserved.
 //
 
 import Foundation
 
-class AuthService {
-    private let apiClient: DomruAPIClient
+class NetworkAuthService: AuthService {
+    private let apiClient: APIClient
     private let settingService: SettingsService
     var isAuthorized: Bool {
         return settingService.authToken != nil
     }
 
-    init(apiClient: DomruAPIClient, settingService: SettingsService) {
+    init(apiClient: APIClient, settingService: SettingsService) {
         self.settingService = settingService
         self.apiClient = apiClient
     }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SettingsService {
+class UserDefaultsSettingsService: SettingsService {
     private var userDefaults: UserDefaults = UserDefaults.standard
     private enum Setting: String {
         case authToken = "authToken"

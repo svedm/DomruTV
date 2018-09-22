@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14313.18" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J9X-cp-Qoz">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Auth View Controller-->
+        <scene sceneID="ajq-G3-GgI">
+            <objects>
+                <viewController storyboardIdentifier="AuthViewController" id="J9X-cp-Qoz" customClass="AuthViewController" customModule="DomruTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tzl-53-YSD"/>
+                        <viewControllerLayoutGuide type="bottom" id="8rR-uv-eIT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vma-q2-li4">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xcm-Dn-EqX">
+                                <rect key="frame" x="710" y="548" width="500" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="500" id="jUq-oX-HTB"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VQ-lE-7gc">
+                                <rect key="frame" x="863" y="658" width="195" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Sign in"/>
+                                <connections>
+                                    <action selector="login" destination="J9X-cp-Qoz" eventType="primaryActionTriggered" id="sR2-Uz-yUe"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="GqN-zp-JRC">
+                                <rect key="frame" x="840" y="126" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="ELe-5x-xOe"/>
+                                    <constraint firstAttribute="width" secondItem="GqN-zp-JRC" secondAttribute="height" multiplier="1:1" id="JJn-3u-J6s"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YyT-Wj-54i">
+                                <rect key="frame" x="710" y="494" width="500" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="500" id="euu-zk-r2S"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="GqN-zp-JRC" firstAttribute="centerX" secondItem="Vma-q2-li4" secondAttribute="centerX" id="43C-16-ssh"/>
+                            <constraint firstItem="YyT-Wj-54i" firstAttribute="centerX" secondItem="Vma-q2-li4" secondAttribute="centerX" id="GOi-FU-6li"/>
+                            <constraint firstItem="3VQ-lE-7gc" firstAttribute="centerX" secondItem="Vma-q2-li4" secondAttribute="centerX" id="IA7-nA-bv5"/>
+                            <constraint firstItem="YyT-Wj-54i" firstAttribute="top" secondItem="GqN-zp-JRC" secondAttribute="bottom" constant="128" id="gNY-fM-jP1"/>
+                            <constraint firstItem="YyT-Wj-54i" firstAttribute="bottom" secondItem="Vma-q2-li4" secondAttribute="centerY" id="gqm-Eq-RoP"/>
+                            <constraint firstItem="Xcm-Dn-EqX" firstAttribute="centerX" secondItem="Vma-q2-li4" secondAttribute="centerX" id="hBA-Er-tqT"/>
+                            <constraint firstItem="3VQ-lE-7gc" firstAttribute="top" secondItem="Xcm-Dn-EqX" secondAttribute="bottom" constant="64" id="ksm-CA-IVe"/>
+                            <constraint firstItem="Xcm-Dn-EqX" firstAttribute="top" secondItem="YyT-Wj-54i" secondAttribute="bottom" constant="8" id="pNl-1n-cDW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ume-JD-z5t"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginField" destination="YyT-Wj-54i" id="wPt-fe-T8H"/>
+                        <outlet property="passwordField" destination="Xcm-Dn-EqX" id="09S-KA-Xsv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uij-Ja-KBu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="1022" height="1024"/>
+    </resources>
+</document>
