@@ -18,7 +18,7 @@ class ChannelsViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
 
     struct Actions {
-        var showChannel: (_ id: Int, _ resourceId: Int, _ completion: @escaping (Result<Void, Error>) -> Void) -> Void
+        var showChannel: (_ channels: [ChannelsResponse.Channel], _ startIndex: Int) -> Void
     }
 
     var data: Data!
@@ -58,14 +58,7 @@ class ChannelsViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let channel = channels[indexPath.item]
-        guard let resourceId = channel.resources.first(where: { $0.type == .hls })?.id else { return }
-
-        activityIndicator.isHidden = false
-
-        actions.showChannel(channel.id, resourceId) { _ in
-            self.activityIndicator.isHidden = true
-        }
+        actions.showChannel(channels, indexPath.item)
     }
 
     func collectionView(

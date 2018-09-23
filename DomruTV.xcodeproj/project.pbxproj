@@ -19,6 +19,7 @@
 		4EAFDEDABC9F01D52AB92A51 /* UserDefaultsSettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD51AC886E36A5A3AF9C4 /* UserDefaultsSettingsService.swift */; };
 		4EAFDFAC434EB7D7D66A18D7 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD90B5F3A6D90CB19F1AC /* AuthResponse.swift */; };
 		4EAFDFADDEB7BBF1DAD22A03 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD69BDE1B9DA02BDA4481 /* Result.swift */; };
+		664DCC422157C41700DB6759 /* ChannelsPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664DCC412157C41700DB6759 /* ChannelsPlayerViewController.swift */; };
 		66813B9F21373AA200CBBE46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66813B9E21373AA200CBBE46 /* AppDelegate.swift */; };
 		66813BA621373AA300CBBE46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66813BA521373AA300CBBE46 /* Assets.xcassets */; };
 		66813BAF21373F0100CBBE46 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66813BAE21373F0100CBBE46 /* Alamofire.framework */; };
@@ -54,6 +55,7 @@
 		4EAFD8AC766E360A4B44A093 /* DomruTVError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomruTVError.swift; sourceTree = "<group>"; };
 		4EAFD90B5F3A6D90CB19F1AC /* AuthResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		4EAFDF90274FE72F7C7023E3 /* ChannelsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsResponse.swift; sourceTree = "<group>"; };
+		664DCC412157C41700DB6759 /* ChannelsPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsPlayerViewController.swift; sourceTree = "<group>"; };
 		66813B9B21373AA200CBBE46 /* DomruTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DomruTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66813B9E21373AA200CBBE46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66813BA521373AA300CBBE46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				4EAFD4944542FFCFC757D199 /* ChannelsViewController.swift */,
+				664DCC412157C41700DB6759 /* ChannelsPlayerViewController.swift */,
 				4EAFD1F1E91ADFAA246EBA40 /* Channels.storyboard */,
 				66CA675B213C45580021E6B5 /* ChannelCollectionViewCell.swift */,
 				66BA60762156D9270046AE0E /* ChannelsCoordinator.swift */,
@@ -389,6 +392,7 @@
 				4EAFDFAC434EB7D7D66A18D7 /* AuthResponse.swift in Sources */,
 				4EAFDEA15FF652A000243E27 /* DeviceTokenResponse.swift in Sources */,
 				4EAFD5C5347BAF54F6A42E80 /* ChannelsResponse.swift in Sources */,
+				664DCC422157C41700DB6759 /* ChannelsPlayerViewController.swift in Sources */,
 				66BA6068215689780046AE0E /* RESTAPIClient.swift in Sources */,
 				66BA6065215688330046AE0E /* NetworkChannelsService.swift in Sources */,
 				4EAFD25F3F460E46A15932DA /* DomruAPIResponse.swift in Sources */,

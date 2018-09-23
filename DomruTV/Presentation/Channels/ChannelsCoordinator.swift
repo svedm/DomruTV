@@ -8,7 +8,6 @@
 
 import UIKit
 import Swinject
-import AVKit
 
 class ChannelsCoordinator {
     private let channelsService: ChannelsService
@@ -25,26 +24,20 @@ class ChannelsCoordinator {
         let viewController: ChannelsViewController = Storyboard.channels.instantiate()
         viewController.data = ChannelsViewController.Data(channels: getChannels)
         viewController.actions = ChannelsViewController.Actions { [unowned viewController] in
-            self.showChannel($0, resourceId: $1, presenter: viewController, completion: $2)
+            self.showChannel(channels: $0, startIndex: $1, presenter: viewController)
         }
         return viewController
     }
 
-    private func showChannel(_ id: Int, resourceId: Int, presenter: UIViewController, completion: @escaping (Result<Void, Error>) -> Void) {
-        channelsService.getChannelURL(channelId: id, resourceId: resourceId) { result in
-            switch result {
-                case .success(let url):
-                    completion(.success(Void()))
-                    let player = AVPlayer(url: url)
-                    let controller = AVPlayerViewController()
-                    controller.player = player
-                    presenter.present(controller, animated: true) {
-                        player.play()
-                    }
-                case .error(let error):
-                    completion(.error(error))
-            }
-        }
+    private func createPlayerViewController(channels: [ChannelsResponse.Channel], startIndex: Int) -> ChannelsPlayerViewController {
+        let viewController = ChannelsPlayerViewController()
+        viewController.data = ChannelsPlayerViewController.Data(channels: channels, currentChannelIndex: startIndex)
+        viewController.actions = ChannelsPlayerViewController.Actions(getChannelURL: getChannelURL)
+        return viewController
+    }
+
+    private func showChannel(channels: [ChannelsResponse.Channel], startIndex: Int, presenter: UIViewController) {
+        presenter.present(createPlayerViewController(channels: channels, startIndex: startIndex), animated: true, completion: nil)
     }
 
     private func getChannels(completion: @escaping ([ChannelsResponse.Channel]) -> Void) {
