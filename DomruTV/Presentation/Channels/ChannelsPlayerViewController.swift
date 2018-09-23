@@ -38,6 +38,7 @@ class ChannelsPlayerViewController: AVPlayerViewController, AVPlayerViewControll
         let channel = data.channels[data.currentChannelIndex]
         guard let resourceId = channel.resources.first(where: { $0.type == .hls })?.id else { return }
 
+        player?.replaceCurrentItem(with: nil)
         actions.getChannelURL(channel.id, resourceId) { result in
             switch result {
                 case .success(let url):
