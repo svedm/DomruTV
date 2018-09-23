@@ -57,20 +57,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="5pj-mt-gaF">
+                                <rect key="frame" x="928" y="508" width="64" height="64"/>
+                            </activityIndicatorView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="GqN-zp-JRC" firstAttribute="centerX" secondItem="Vma-q2-li4" secondAttribute="centerX" id="43C-16-ssh"/>
                             <constraint firstItem="YyT-Wj-54i" firstAttribute="centerX" secondItem="Vma-q2-li4" secondAttribute="centerX" id="GOi-FU-6li"/>
                             <constraint firstItem="3VQ-lE-7gc" firstAttribute="centerX" secondItem="Vma-q2-li4" secondAttribute="centerX" id="IA7-nA-bv5"/>
+                            <constraint firstItem="5pj-mt-gaF" firstAttribute="centerX" secondItem="Vma-q2-li4" secondAttribute="centerX" id="Ny6-rv-Bhi"/>
                             <constraint firstItem="YyT-Wj-54i" firstAttribute="top" secondItem="GqN-zp-JRC" secondAttribute="bottom" constant="128" id="gNY-fM-jP1"/>
                             <constraint firstItem="YyT-Wj-54i" firstAttribute="bottom" secondItem="Vma-q2-li4" secondAttribute="centerY" id="gqm-Eq-RoP"/>
                             <constraint firstItem="Xcm-Dn-EqX" firstAttribute="centerX" secondItem="Vma-q2-li4" secondAttribute="centerX" id="hBA-Er-tqT"/>
                             <constraint firstItem="3VQ-lE-7gc" firstAttribute="top" secondItem="Xcm-Dn-EqX" secondAttribute="bottom" constant="64" id="ksm-CA-IVe"/>
+                            <constraint firstItem="5pj-mt-gaF" firstAttribute="centerY" secondItem="Vma-q2-li4" secondAttribute="centerY" id="mI1-Z1-yXv"/>
                             <constraint firstItem="Xcm-Dn-EqX" firstAttribute="top" secondItem="YyT-Wj-54i" secondAttribute="bottom" constant="8" id="pNl-1n-cDW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ume-JD-z5t"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="5pj-mt-gaF" id="ckl-tm-CSn"/>
                         <outlet property="loginField" destination="YyT-Wj-54i" id="wPt-fe-T8H"/>
                         <outlet property="passwordField" destination="Xcm-Dn-EqX" id="09S-KA-Xsv"/>
                     </connections>

@@ -11,6 +11,7 @@ import UIKit
 class AuthViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet private var loginField: UITextField!
     @IBOutlet private var passwordField: UITextField!
+    @IBOutlet private var activityIndicator: UIActivityIndicatorView!
 
     struct Actions {
         var login: (_ login: String, _ password: String, _ failure: @escaping (Error) -> Void) -> Void
@@ -30,7 +31,9 @@ class AuthViewController: UIViewController, UITextFieldDelegate {
             let password = passwordField.text, !password.isEmpty
         else { return }
 
+        activityIndicator.isHidden = false
         actions.login(login, password) { _ in
+            self.activityIndicator.isHidden = true
             let controller = UIAlertController(title: "Error", message: "Wrong login or password", preferredStyle: .alert)
             controller.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             self.present(controller, animated: true, completion: nil)
