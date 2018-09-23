@@ -18,7 +18,7 @@ class ChannelsViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
 
     struct Actions {
-        var getChannelURL: (_ channelId: Int, _ resourceId: Int, _ completion: @escaping (Result<URL, Error>) -> Void) -> Void
+        var showChannel: (_ id: Int, _ resourceId: Int, _ completion: @escaping (Result<Void, Error>) -> Void) -> Void
     }
 
     var data: Data!
@@ -43,15 +43,6 @@ class ChannelsViewController: UIViewController, UICollectionViewDelegate, UIColl
         }
     }
 
-    private func showChannel(url: URL) {
-        let player = AVPlayer(url: url)
-        let controller = AVPlayerViewController()
-        controller.player = player
-        present(controller, animated: true) {
-            player.play()
-        }
-    }
-
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return channels.count
     }
@@ -71,14 +62,9 @@ class ChannelsViewController: UIViewController, UICollectionViewDelegate, UIColl
         guard let resourceId = channel.resources.first(where: { $0.type == .hls })?.id else { return }
 
         activityIndicator.isHidden = false
-        actions.getChannelURL(channel.id, resourceId) { [weak self] result in
-            self?.activityIndicator.isHidden = true
-            switch result {
-                case .success(let url):
-                    self?.showChannel(url: url)
-                case .error(let error):
-                    print(error.localizedDescription)
-            }
+
+        actions.showChannel(channel.id, resourceId) { _ in
+            self.activityIndicator.isHidden = true
         }
     }
 
