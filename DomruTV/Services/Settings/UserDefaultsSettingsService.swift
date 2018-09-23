@@ -23,7 +23,9 @@ class UserDefaultsSettingsService: SettingsService {
     }
 
     var deviceId: String {
-        return string(for: .deviceId) ?? createDeviceId()
+        return "7247EE41-5FBE-4C93-A4EF-B910DC57F0B9"
+//        return string(for: .deviceId) ?? createDeviceId()
+        // TODO: implement bound logic
     }
 
     private func createDeviceId() -> String {
