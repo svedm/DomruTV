@@ -20,14 +20,14 @@ class NetworkAuthService: AuthService {
         self.apiClient = apiClient
     }
 
-    func login(completion: @escaping (Result<Void, DomruTVError>) -> Void) {
+    func login(login: String, password: String, completion: @escaping (Result<Void, DomruTVError>) -> Void) {
         apiClient.getUnboundedToken { result in
             switch result {
                 case .success(let response):
                     self.apiClient.authToken = response.token
                     self.auth(
-                        login: AppConstants.login,
-                        password: AppConstants.password
+                        login: login,
+                        password: password
                     ) { result in
                         switch result {
                             case .success(let response):

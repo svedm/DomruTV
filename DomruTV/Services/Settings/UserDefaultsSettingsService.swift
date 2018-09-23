@@ -12,6 +12,7 @@ class UserDefaultsSettingsService: SettingsService {
     private var userDefaults: UserDefaults = UserDefaults.standard
     private enum Setting: String {
         case authToken = "authToken"
+        case deviceId = "deviceId"
     }
 
     var authToken: String? {
@@ -19,6 +20,16 @@ class UserDefaultsSettingsService: SettingsService {
     }
     func setAuthToken(_ token: String) {
         set(token, for: .authToken)
+    }
+
+    var deviceId: String {
+        return string(for: .deviceId) ?? createDeviceId()
+    }
+
+    private func createDeviceId() -> String {
+        let deviceId = UUID().uuidString
+        set(deviceId, for: .deviceId)
+        return deviceId
     }
 
     private func string(for key: Setting) -> String? {

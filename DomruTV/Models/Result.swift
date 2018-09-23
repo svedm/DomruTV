@@ -6,7 +6,7 @@
 //  Copyright © 2018 Svetoslav Karasev. All rights reserved.
 //
 
-enum Result<T, E: Error> {
+enum Result<T, E> {
     case success(T)
     case error(E)
 }

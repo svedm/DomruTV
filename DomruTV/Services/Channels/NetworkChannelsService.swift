@@ -11,8 +11,9 @@ import Foundation
 class NetworkChannelsService: ChannelsService {
     private let apiClient: APIClient
 
-    init(apiClient: APIClient) {
+    init(apiClient: APIClient, settingsService: SettingsService) {
         self.apiClient = apiClient
+        self.apiClient.authToken = settingsService.authToken
     }
 
     func getChannelsList(completion: @escaping (Result<ChannelsResponse.List, DomruTVError>) -> Void) {

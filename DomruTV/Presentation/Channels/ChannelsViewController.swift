@@ -12,47 +12,34 @@ import AVKit
 class ChannelsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private var collectionView: UICollectionView!
-    private var channelsService: NetworkChannelsService!
-    private var data: [ChannelsResponse.Channel] = []
+
+    struct Data {
+        var channels: (@escaping ([ChannelsResponse.Channel]) -> Void) -> Void
+    }
+
+    struct Actions {
+        var getChannelURL: (_ channelId: Int, _ resourceId: Int, _ completion: @escaping (Result<URL, Error>) -> Void) -> Void
+    }
+
+    var data: Data!
+    var actions: Actions!
+    private var channels: [ChannelsResponse.Channel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let settingsService = UserDefaultsSettingsService()
-        let apiClient = RESTAPIClient(deviceId: AppConstants.deviceId, authToken: settingsService.authToken)
-        let authService = NetworkAuthService(apiClient: apiClient, settingService: settingsService)
-        channelsService = NetworkChannelsService(apiClient: apiClient)
-
-        if !authService.isAuthorized {
-            activityIndicator.isHidden = false
-            authService.login { [weak self] result in
-                self?.activityIndicator.isHidden = true
-                switch result {
-                    case .success:
-                        self?.loadData()
-                    case .error(let error):
-                        print(error.localizedDescription)
-                }
-            }
-        } else {
-            loadData()
-        }
-
         collectionView.delegate = self
         collectionView.dataSource = self
+        loadData()
     }
 
     private func loadData() {
         activityIndicator.isHidden = false
-        channelsService.getChannelsList { [weak self] result in
+
+        data.channels { [weak self] channels in
             self?.activityIndicator.isHidden = true
-            switch result {
-                case .success(let data):
-                    self?.data = data.items
-                    self?.collectionView.reloadData()
-                case .error(let error):
-                    print(error.localizedDescription)
-            }
+            self?.channels = channels
+            self?.collectionView.reloadData()
         }
     }
 
@@ -66,25 +53,25 @@ class ChannelsViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        return channels.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChannelCollectionViewCell.reuseId, for: indexPath)
 
         if let channelCell = cell as? ChannelCollectionViewCell {
-            let channel = data[indexPath.item]
+            let channel = channels[indexPath.item]
             channelCell.configure(title: channel.title, imageURL: channel.logoURL)
         }
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let channel = data[indexPath.item]
+        let channel = channels[indexPath.item]
         guard let resourceId = channel.resources.first(where: { $0.type == .hls })?.id else { return }
 
         activityIndicator.isHidden = false
-        channelsService.getChannelURL(channelId: channel.id, resourceId: resourceId) { [weak self] result in
+        actions.getChannelURL(channel.id, resourceId) { [weak self] result in
             self?.activityIndicator.isHidden = true
             switch result {
                 case .success(let url):

@@ -11,4 +11,5 @@ import Foundation
 protocol SettingsService {
     var authToken: String? { get }
     func setAuthToken(_ token: String)
+    var deviceId: String { get }
 }

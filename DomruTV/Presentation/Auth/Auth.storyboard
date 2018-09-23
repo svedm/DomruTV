@@ -23,16 +23,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xcm-Dn-EqX">
-                                <rect key="frame" x="710" y="548" width="500" height="46"/>
+                                <rect key="frame" x="710" y="548" width="500" height="64"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="H4T-7B-g01"/>
                                     <constraint firstAttribute="width" constant="500" id="jUq-oX-HTB"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VQ-lE-7gc">
-                                <rect key="frame" x="863" y="658" width="195" height="86"/>
+                                <rect key="frame" x="863" y="676" width="195" height="86"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Sign in"/>
                                 <connections>
@@ -40,19 +41,20 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="GqN-zp-JRC">
-                                <rect key="frame" x="840" y="126" width="240" height="240"/>
+                                <rect key="frame" x="840" y="108" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="ELe-5x-xOe"/>
                                     <constraint firstAttribute="width" secondItem="GqN-zp-JRC" secondAttribute="height" multiplier="1:1" id="JJn-3u-J6s"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YyT-Wj-54i">
-                                <rect key="frame" x="710" y="494" width="500" height="46"/>
+                                <rect key="frame" x="710" y="476" width="500" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="500" id="euu-zk-r2S"/>
+                                    <constraint firstAttribute="height" constant="64" id="jjO-aM-MdF"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>

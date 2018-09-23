@@ -12,8 +12,7 @@
 		4EAFD25F3F460E46A15932DA /* DomruAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD2EB8495A5B7EF203B9E /* DomruAPIResponse.swift */; };
 		4EAFD5C5347BAF54F6A42E80 /* ChannelsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFDF90274FE72F7C7023E3 /* ChannelsResponse.swift */; };
 		4EAFD9E17C1C4DF95F13D0A0 /* URL+Required.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD1960D988B4BBED7B160 /* URL+Required.swift */; };
-		4EAFDB9B1F7183CEF46C403E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EAFD1F1E91ADFAA246EBA40 /* Main.storyboard */; };
-		4EAFDBA808CA83BD00A19538 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD2DCFD06C12B68665703 /* AppConstants.swift */; };
+		4EAFDB9B1F7183CEF46C403E /* Channels.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EAFD1F1E91ADFAA246EBA40 /* Channels.storyboard */; };
 		4EAFDCB3C2037C9D549C0947 /* Alamofire+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD2D7440A33A6CC2ED331 /* Alamofire+Codable.swift */; };
 		4EAFDE6C4897FC3CC7F6EB20 /* DomruTVError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD8AC766E360A4B44A093 /* DomruTVError.swift */; };
 		4EAFDEA15FF652A000243E27 /* DeviceTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD03FD5C209EAE2BDE0D2 /* DeviceTokenResponse.swift */; };
@@ -32,6 +31,12 @@
 		66BA6065215688330046AE0E /* NetworkChannelsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BA6064215688330046AE0E /* NetworkChannelsService.swift */; };
 		66BA6068215689780046AE0E /* RESTAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BA6067215689780046AE0E /* RESTAPIClient.swift */; };
 		66BA606A215689910046AE0E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BA6069215689910046AE0E /* APIClient.swift */; };
+		66BA606C2156C8950046AE0E /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BA606B2156C8950046AE0E /* AppConfigurator.swift */; };
+		66BA606E2156C8E40046AE0E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BA606D2156C8E40046AE0E /* AppCoordinator.swift */; };
+		66BA60702156D41C0046AE0E /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66BA606F2156D41C0046AE0E /* Swinject.framework */; };
+		66BA60732156D4FD0046AE0E /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BA60722156D4FD0046AE0E /* Storyboard.swift */; };
+		66BA60772156D9270046AE0E /* ChannelsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BA60762156D9270046AE0E /* ChannelsCoordinator.swift */; };
+		66BA60792156D9460046AE0E /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BA60782156D9460046AE0E /* AuthCoordinator.swift */; };
 		66CA675C213C45580021E6B5 /* ChannelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CA675B213C45580021E6B5 /* ChannelCollectionViewCell.swift */; };
 		66CA675E213C48CE0021E6B5 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CA675D213C48CE0021E6B5 /* AlamofireImage.framework */; };
 /* End PBXBuildFile section */
@@ -39,9 +44,8 @@
 /* Begin PBXFileReference section */
 		4EAFD03FD5C209EAE2BDE0D2 /* DeviceTokenResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTokenResponse.swift; sourceTree = "<group>"; };
 		4EAFD1960D988B4BBED7B160 /* URL+Required.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Required.swift"; sourceTree = "<group>"; };
-		4EAFD1F1E91ADFAA246EBA40 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4EAFD1F1E91ADFAA246EBA40 /* Channels.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Channels.storyboard; sourceTree = "<group>"; };
 		4EAFD2D7440A33A6CC2ED331 /* Alamofire+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire+Codable.swift"; sourceTree = "<group>"; };
-		4EAFD2DCFD06C12B68665703 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		4EAFD2EB8495A5B7EF203B9E /* DomruAPIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomruAPIResponse.swift; sourceTree = "<group>"; };
 		4EAFD4944542FFCFC757D199 /* ChannelsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsViewController.swift; sourceTree = "<group>"; };
 		4EAFD51AC886E36A5A3AF9C4 /* UserDefaultsSettingsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsSettingsService.swift; sourceTree = "<group>"; };
@@ -64,6 +68,12 @@
 		66BA6064215688330046AE0E /* NetworkChannelsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkChannelsService.swift; sourceTree = "<group>"; };
 		66BA6067215689780046AE0E /* RESTAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTAPIClient.swift; sourceTree = "<group>"; };
 		66BA6069215689910046AE0E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		66BA606B2156C8950046AE0E /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
+		66BA606D2156C8E40046AE0E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		66BA606F2156D41C0046AE0E /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/tvOS/Swinject.framework; sourceTree = "<group>"; };
+		66BA60722156D4FD0046AE0E /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		66BA60762156D9270046AE0E /* ChannelsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsCoordinator.swift; sourceTree = "<group>"; };
+		66BA60782156D9460046AE0E /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		66CA675B213C45580021E6B5 /* ChannelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCollectionViewCell.swift; sourceTree = "<group>"; };
 		66CA675D213C48CE0021E6B5 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/tvOS/AlamofireImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +85,7 @@
 			files = (
 				66813BAF21373F0100CBBE46 /* Alamofire.framework in Frameworks */,
 				66CA675E213C48CE0021E6B5 /* AlamofireImage.framework in Frameworks */,
+				66BA60702156D41C0046AE0E /* Swinject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				4EAFD1682269568A64F36458 /* Extensions */,
-				4EAFD2DCFD06C12B68665703 /* AppConstants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -111,11 +121,9 @@
 		4EAFD863E2883EB084EABA5D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				4EAFD4944542FFCFC757D199 /* ChannelsViewController.swift */,
-				4EAFD1F1E91ADFAA246EBA40 /* Main.storyboard */,
-				66CA675B213C45580021E6B5 /* ChannelCollectionViewCell.swift */,
-				66AF87F6213C8598009AF52C /* AuthViewController.swift */,
-				66BA605821566C550046AE0E /* Auth.storyboard */,
+				66BA60742156D7730046AE0E /* Auth */,
+				66BA60752156D7780046AE0E /* Channels */,
+				66BA60712156D4F00046AE0E /* Common */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -173,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				66813B9E21373AA200CBBE46 /* AppDelegate.swift */,
+				66BA606B2156C8950046AE0E /* AppConfigurator.swift */,
+				66BA606D2156C8E40046AE0E /* AppCoordinator.swift */,
 				66813BA521373AA300CBBE46 /* Assets.xcassets */,
 				66813BA721373AA300CBBE46 /* Info.plist */,
 				4EAFD0454FD4417268D2535A /* Common */,
@@ -187,6 +197,7 @@
 		66813BAD21373F0100CBBE46 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				66BA606F2156D41C0046AE0E /* Swinject.framework */,
 				66CA675D213C48CE0021E6B5 /* AlamofireImage.framework */,
 				66813BAE21373F0100CBBE46 /* Alamofire.framework */,
 			);
@@ -216,6 +227,35 @@
 			children = (
 				66BA6062215688270046AE0E /* ChannelsService.swift */,
 				66BA6064215688330046AE0E /* NetworkChannelsService.swift */,
+			);
+			path = Channels;
+			sourceTree = "<group>";
+		};
+		66BA60712156D4F00046AE0E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				66BA60722156D4FD0046AE0E /* Storyboard.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		66BA60742156D7730046AE0E /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				66AF87F6213C8598009AF52C /* AuthViewController.swift */,
+				66BA605821566C550046AE0E /* Auth.storyboard */,
+				66BA60782156D9460046AE0E /* AuthCoordinator.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		66BA60752156D7780046AE0E /* Channels */ = {
+			isa = PBXGroup;
+			children = (
+				4EAFD4944542FFCFC757D199 /* ChannelsViewController.swift */,
+				4EAFD1F1E91ADFAA246EBA40 /* Channels.storyboard */,
+				66CA675B213C45580021E6B5 /* ChannelCollectionViewCell.swift */,
+				66BA60762156D9270046AE0E /* ChannelsCoordinator.swift */,
 			);
 			path = Channels;
 			sourceTree = "<group>";
@@ -281,7 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66813BA621373AA300CBBE46 /* Assets.xcassets in Resources */,
-				4EAFDB9B1F7183CEF46C403E /* Main.storyboard in Resources */,
+				4EAFDB9B1F7183CEF46C403E /* Channels.storyboard in Resources */,
 				66BA605921566C550046AE0E /* Auth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,15 +337,17 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/tvOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/tvOS/AlamofireImage.framework",
+				"$(SRCROOT)/Carthage/Build/tvOS/Swinject.framework",
 			);
 			name = Carthage;
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireImage.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Swinject.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 		66813BB12137416900CBBE46 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -328,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66BA606C2156C8950046AE0E /* AppConfigurator.swift in Sources */,
 				66CA675C213C45580021E6B5 /* ChannelCollectionViewCell.swift in Sources */,
 				66813B9F21373AA200CBBE46 /* AppDelegate.swift in Sources */,
 				4EAFD9E17C1C4DF95F13D0A0 /* URL+Required.swift in Sources */,
@@ -335,18 +378,21 @@
 				4EAFDCB3C2037C9D549C0947 /* Alamofire+Codable.swift in Sources */,
 				66BA606A215689910046AE0E /* APIClient.swift in Sources */,
 				66BA605D215685530046AE0E /* NetworkAuthService.swift in Sources */,
-				4EAFDBA808CA83BD00A19538 /* AppConstants.swift in Sources */,
 				66BA605B215685450046AE0E /* AuthService.swift in Sources */,
 				4EAFDFADDEB7BBF1DAD22A03 /* Result.swift in Sources */,
 				4EAFDE6C4897FC3CC7F6EB20 /* DomruTVError.swift in Sources */,
+				66BA606E2156C8E40046AE0E /* AppCoordinator.swift in Sources */,
 				66BA6060215687B10046AE0E /* SettingsService.swift in Sources */,
+				66BA60772156D9270046AE0E /* ChannelsCoordinator.swift in Sources */,
 				4EAFD185B526C12F9A2C7521 /* ResourceURL.swift in Sources */,
+				66BA60792156D9460046AE0E /* AuthCoordinator.swift in Sources */,
 				4EAFDFAC434EB7D7D66A18D7 /* AuthResponse.swift in Sources */,
 				4EAFDEA15FF652A000243E27 /* DeviceTokenResponse.swift in Sources */,
 				4EAFD5C5347BAF54F6A42E80 /* ChannelsResponse.swift in Sources */,
 				66BA6068215689780046AE0E /* RESTAPIClient.swift in Sources */,
 				66BA6065215688330046AE0E /* NetworkChannelsService.swift in Sources */,
 				4EAFD25F3F460E46A15932DA /* DomruAPIResponse.swift in Sources */,
+				66BA60732156D4FD0046AE0E /* Storyboard.swift in Sources */,
 				66BA6063215688270046AE0E /* ChannelsService.swift in Sources */,
 				66AF87F7213C8598009AF52C /* AuthViewController.swift in Sources */,
 				4EAFDEDABC9F01D52AB92A51 /* UserDefaultsSettingsService.swift in Sources */,

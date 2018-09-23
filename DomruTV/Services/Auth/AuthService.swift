@@ -10,5 +10,5 @@ import Foundation
 
 protocol AuthService {
     var isAuthorized: Bool { get }
-    func login(completion: @escaping (Result<Void, DomruTVError>) -> Void)
+    func login(login: String, password: String, completion: @escaping (Result<Void, DomruTVError>) -> Void)
 }
