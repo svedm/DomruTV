@@ -25,6 +25,7 @@ struct ChannelsResponse: Decodable {
             enum ResourceType: String, Decodable {
                 case hls = "hls"
                 case posterBlueprint = "poster_blueprint"
+                case backgroundBlueprint = "background_blueprint"
                 case mcast = "mcast"
                 case posterChannelGridBlueprint = "poster_channel_grid_blueprint"
                 case catchup = "catchup"
