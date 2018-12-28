@@ -74,12 +74,12 @@ class RESTAPIClient: APIClient {
             completion: completion)
     }
 
-    func getChannelsList(completion: @escaping (Result<ChannelsResponse, DomruTVError>) -> Void) {
-        let params = [
+    func getChannelsList(pageSize: Int, page: Int, completion: @escaping (Result<ChannelsResponse, DomruTVError>) -> Void) {
+        let params: [String: Any] = [
             "adult": "not-adult,adult",
-            "limit": "100",
-            "offset": "0",
-            "page": "1"
+            "limit": pageSize,
+            "offset": 0,
+            "page": page
         ]
         let headers: HTTPHeaders = ["View": "stb3"]
         request(Endpoint.channelsAPI.appendingPathComponent("/api/v3/showcases/library/channels"), method: .get, parameters: params,

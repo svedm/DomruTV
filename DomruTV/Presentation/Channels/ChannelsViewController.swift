@@ -14,7 +14,7 @@ class ChannelsViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet private var collectionView: UICollectionView!
 
     struct Data {
-        var channels: (@escaping ([ChannelsResponse.Channel]) -> Void) -> Void
+        var channels: (_ count: Int, _ page: Int, @escaping ([ChannelsResponse.Channel], Int) -> Void) -> Void
     }
 
     struct Actions {
@@ -24,27 +24,41 @@ class ChannelsViewController: UIViewController, UICollectionViewDelegate, UIColl
     var data: Data!
     var actions: Actions!
     private var channels: [ChannelsResponse.Channel] = []
+    private let pageSize = 50
+    private var currentPage = 1
+    private var total: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         collectionView.delegate = self
         collectionView.dataSource = self
+        activityIndicator.isHidden = true
         loadData()
     }
 
     private func loadData() {
+        guard currentPage <= ((total ?? pageSize) / pageSize) + 1, activityIndicator.isHidden else { return }
+
         activityIndicator.isHidden = false
 
-        data.channels { [weak self] channels in
-            self?.activityIndicator.isHidden = true
-            self?.channels = channels
+        data.channels(pageSize, currentPage) { [weak self] channels, total in
+            self?.channels.append(contentsOf: channels)
+            self?.total = total
+            self?.currentPage += 1
             self?.collectionView.reloadData()
+            self?.activityIndicator.isHidden = true
         }
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return channels.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.item == channels.count - 1 {
+            loadData()
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

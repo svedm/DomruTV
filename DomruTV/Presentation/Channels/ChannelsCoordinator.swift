@@ -40,13 +40,14 @@ class ChannelsCoordinator {
         presenter.present(createPlayerViewController(channels: channels, startIndex: startIndex), animated: true, completion: nil)
     }
 
-    private func getChannels(completion: @escaping ([ChannelsResponse.Channel]) -> Void) {
-        channelsService.getChannelsList { result in
+    private func getChannels(pageSize: Int, page: Int, completion: @escaping ([ChannelsResponse.Channel], Int) -> Void) {
+        channelsService.getChannelsList(pageSize: pageSize, page: page) { result in
             switch result {
                 case .success(let data):
-                    completion(data.items)
-                case .error:
-                    completion([])
+                    completion(data.items, data.total)
+                case .error(let error):
+                    // TODO: Show alert in VC
+                    print(error)
             }
         }
     }

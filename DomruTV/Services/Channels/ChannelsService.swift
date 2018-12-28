@@ -9,6 +9,6 @@
 import Foundation
 
 protocol ChannelsService {
-    func getChannelsList(completion: @escaping (Result<ChannelsResponse.List, DomruTVError>) -> Void)
+    func getChannelsList(pageSize: Int, page: Int, completion: @escaping (Result<ChannelsResponse.List, DomruTVError>) -> Void)
     func getChannelURL(channelId: Int, resourceId: Int, completion: @escaping (Result<URL, DomruTVError>) -> Void)
 }

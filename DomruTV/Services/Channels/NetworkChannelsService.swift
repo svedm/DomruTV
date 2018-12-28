@@ -16,8 +16,8 @@ class NetworkChannelsService: ChannelsService {
         self.apiClient.authToken = settingsService.authToken
     }
 
-    func getChannelsList(completion: @escaping (Result<ChannelsResponse.List, DomruTVError>) -> Void) {
-        apiClient.getChannelsList { result in
+    func getChannelsList(pageSize: Int, page: Int, completion: @escaping (Result<ChannelsResponse.List, DomruTVError>) -> Void) {
+        apiClient.getChannelsList(pageSize: pageSize, page: page) { result in
             switch result {
                 case .success(let response):
                     completion(.success(response.data))
