@@ -28,7 +28,7 @@ class ChannelsPlayerViewController: AVPlayerViewController, AVPlayerViewControll
         skippingBehavior = .skipItem
         isSkipBackwardEnabled = true
         isSkipForwardEnabled = true
-        videoGravity = AVLayerVideoGravity.resizeAspectFill.rawValue
+        videoGravity = .resizeAspectFill
         delegate = self
         player = AVPlayer()
         loadAndPlay()
