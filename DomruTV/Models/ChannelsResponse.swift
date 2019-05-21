@@ -29,6 +29,7 @@ struct ChannelsResponse: Decodable {
                 case mcast = "mcast"
                 case posterChannelGridBlueprint = "poster_channel_grid_blueprint"
                 case catchup = "catchup"
+                case mcastLocal = "hls_mcast_local"
             }
         }
     }
