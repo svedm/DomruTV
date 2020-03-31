@@ -11,7 +11,7 @@ import Alamofire
 
 extension DataRequest {
     static func decodableSerializer<T: Decodable>(decoder: JSONDecoder) -> DataResponseSerializer<T> {
-        return DataResponseSerializer<T> { _, response, data, error in
+        DataResponseSerializer<T> { _, response, data, error in
             if let error = error {
                 return .failure(error)
             }
@@ -34,6 +34,6 @@ extension DataRequest {
 
     @discardableResult
     func responseDecodable<T: Decodable>(decoder: JSONDecoder = JSONDecoder(), completion: @escaping (DataResponse<T>) -> Void) -> Self {
-        return response(queue: nil, responseSerializer: DataRequest.decodableSerializer(decoder: decoder), completionHandler: completion)
+        response(queue: nil, responseSerializer: DataRequest.decodableSerializer(decoder: decoder), completionHandler: completion)
     }
 }

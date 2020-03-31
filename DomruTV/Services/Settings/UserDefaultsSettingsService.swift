@@ -16,14 +16,14 @@ class UserDefaultsSettingsService: SettingsService {
     }
 
     var authToken: String? {
-        return string(for: .authToken)
+		string(for: .authToken)
     }
     func setAuthToken(_ token: String) {
         set(token, for: .authToken)
     }
 
     var deviceId: String {
-        return "7247EE41-5FBE-4C93-A4EF-B910DC57F0B9"
+        "7247EE41-5FBE-4C93-A4EF-B910DC57F0B9"
 //        return string(for: .deviceId) ?? createDeviceId()
         // TODO: implement bound logic
     }
@@ -35,7 +35,7 @@ class UserDefaultsSettingsService: SettingsService {
     }
 
     private func string(for key: Setting) -> String? {
-        return userDefaults.string(forKey: key.rawValue)
+        userDefaults.string(forKey: key.rawValue)
     }
 
     private func set(_ value: Any?, for key: Setting) {

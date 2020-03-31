@@ -30,6 +30,8 @@ struct ChannelsResponse: Decodable {
                 case posterChannelGridBlueprint = "poster_channel_grid_blueprint"
                 case catchup = "catchup"
                 case mcastLocal = "hls_mcast_local"
+				case smartTvBanner = "3_smarttv_asset_poster_banner_showcase_blueprint"
+				case videoSlider = "video_library_slider_image"
             }
         }
     }

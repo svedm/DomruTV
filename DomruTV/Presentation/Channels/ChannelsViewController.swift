@@ -52,7 +52,7 @@ class ChannelsViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return channels.count
+        channels.count
     }
 
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

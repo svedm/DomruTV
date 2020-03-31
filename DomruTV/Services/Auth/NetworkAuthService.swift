@@ -12,7 +12,7 @@ class NetworkAuthService: AuthService {
     private let apiClient: APIClient
     private let settingService: SettingsService
     var isAuthorized: Bool {
-        return settingService.authToken != nil
+        settingService.authToken != nil
     }
 
     init(apiClient: APIClient, settingService: SettingsService) {
