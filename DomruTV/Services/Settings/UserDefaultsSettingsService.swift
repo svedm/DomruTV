@@ -23,7 +23,7 @@ class UserDefaultsSettingsService: SettingsService {
     }
 
     var deviceId: String {
-        "7247EE41-5FBE-4C93-A4EF-B910DC57F0B9"
+        "E9C63620-9B3D-4400-8C97-86C1282F7CAE"
 //        return string(for: .deviceId) ?? createDeviceId()
         // TODO: implement bound logic
     }

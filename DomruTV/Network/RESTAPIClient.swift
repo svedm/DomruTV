@@ -116,7 +116,7 @@ class RESTAPIClient: APIClient {
             method: method,
             parameters: parameters,
             headers: headers
-        ).responseDecodable { (response: DataResponse<T, AFError>) in
+        ).responseDecodable(decoder: jsonDecoder) { (response: DataResponse<T, AFError>) in
             guard let data = response.value else {
                 response.error.map { completion(.error(.network($0))) }
                 return
