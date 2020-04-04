@@ -24,7 +24,7 @@ class ChannelsViewController: UIViewController, UICollectionViewDelegate, UIColl
     var data: Data!
     var actions: Actions!
     private var channels: [ChannelsResponse.Channel] = []
-    private let pageSize = 50
+    private let pageSize = 100
     private var currentPage = 1
     private var total: Int?
 

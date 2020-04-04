@@ -82,8 +82,13 @@ class RESTAPIClient: APIClient {
             "page": page
         ]
         let headers: HTTPHeaders = ["View": "stb3"]
-        request(Endpoint.channelsAPI.appendingPathComponent("/api/v3/showcases/library/channels"), method: .get, parameters: params,
-            completion: completion, headers: headers)
+        request(
+            Endpoint.channelsAPI.appendingPathComponent("/api/v3/showcases/channels-menu/all-channels"),
+            method: .get,
+            parameters: params,
+            completion: completion,
+            headers: headers
+        )
     }
 
     func getResourceURL(channelId: Int, resourceId: Int, completion: @escaping (Result<ResourceURL, DomruTVError>) -> Void) {
