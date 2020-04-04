@@ -17,7 +17,7 @@ class ChannelCollectionViewCell: UICollectionViewCell {
 
     func configure(title: String, imageURL: URL?) {
         label.text = title
-        imageURL.map { imageView.af_setImage(withURL: $0) }
+		imageURL.map { imageView.af.setImage(withURL: $0) }
         backgroundColor = .white
         selectedBackgroundView?.backgroundColor = .lightGray
         layer.cornerRadius = 15

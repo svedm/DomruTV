@@ -10,14 +10,14 @@ import Foundation
 import Alamofire
 
 class RESTAPIClient: APIClient {
-    private var sessionManager: SessionManager
+    private var sessionManager: Session
     private var deviceId: String
     private var jsonDecoder: JSONDecoder
     var authToken: String?
 
-    private class DomruServerTrustPolicyManager: ServerTrustPolicyManager {
-        override func serverTrustPolicy(forHost host: String) -> ServerTrustPolicy? {
-            .disableEvaluation
+    private class DomruServerTrustPolicyManager: ServerTrustManager {
+        override func serverTrustEvaluator(forHost host: String) throws -> ServerTrustEvaluating? {
+            DisabledEvaluator()
         }
     }
 
@@ -29,13 +29,13 @@ class RESTAPIClient: APIClient {
     init(deviceId: String, authToken: String? = nil) {
         self.deviceId = deviceId
         self.authToken = authToken
-        var defaultHeaders = Alamofire.SessionManager.defaultHTTPHeaders
+        var defaultHeaders = URLSessionConfiguration.af.default.headers.dictionary
         defaultHeaders["X-Device-Info"] = deviceId
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = defaultHeaders
-        sessionManager = Alamofire.SessionManager(
+        sessionManager = Session(
             configuration: configuration,
-            serverTrustPolicyManager: DomruServerTrustPolicyManager(policies: [:])
+            serverTrustManager: DomruServerTrustPolicyManager(evaluators: [:])
         )
         jsonDecoder = JSONDecoder()
         jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
@@ -116,7 +116,7 @@ class RESTAPIClient: APIClient {
             method: method,
             parameters: parameters,
             headers: headers
-        ).responseDecodable(decoder: jsonDecoder) { (response: DataResponse<T>) in
+        ).responseDecodable { (response: DataResponse<T, AFError>) in
             guard let data = response.value else {
                 response.error.map { completion(.error(.network($0))) }
                 return

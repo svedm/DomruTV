@@ -13,7 +13,6 @@
 		4EAFD5C5347BAF54F6A42E80 /* ChannelsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFDF90274FE72F7C7023E3 /* ChannelsResponse.swift */; };
 		4EAFD9E17C1C4DF95F13D0A0 /* URL+Required.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD1960D988B4BBED7B160 /* URL+Required.swift */; };
 		4EAFDB9B1F7183CEF46C403E /* Channels.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EAFD1F1E91ADFAA246EBA40 /* Channels.storyboard */; };
-		4EAFDCB3C2037C9D549C0947 /* Alamofire+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD2D7440A33A6CC2ED331 /* Alamofire+Codable.swift */; };
 		4EAFDE6C4897FC3CC7F6EB20 /* DomruTVError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD8AC766E360A4B44A093 /* DomruTVError.swift */; };
 		4EAFDEA15FF652A000243E27 /* DeviceTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD03FD5C209EAE2BDE0D2 /* DeviceTokenResponse.swift */; };
 		4EAFDEDABC9F01D52AB92A51 /* UserDefaultsSettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD51AC886E36A5A3AF9C4 /* UserDefaultsSettingsService.swift */; };
@@ -46,7 +45,6 @@
 		4EAFD03FD5C209EAE2BDE0D2 /* DeviceTokenResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTokenResponse.swift; sourceTree = "<group>"; };
 		4EAFD1960D988B4BBED7B160 /* URL+Required.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Required.swift"; sourceTree = "<group>"; };
 		4EAFD1F1E91ADFAA246EBA40 /* Channels.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Channels.storyboard; sourceTree = "<group>"; };
-		4EAFD2D7440A33A6CC2ED331 /* Alamofire+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire+Codable.swift"; sourceTree = "<group>"; };
 		4EAFD2EB8495A5B7EF203B9E /* DomruAPIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomruAPIResponse.swift; sourceTree = "<group>"; };
 		4EAFD4944542FFCFC757D199 /* ChannelsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsViewController.swift; sourceTree = "<group>"; };
 		4EAFD51AC886E36A5A3AF9C4 /* UserDefaultsSettingsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsSettingsService.swift; sourceTree = "<group>"; };
@@ -130,14 +128,6 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		4EAFDA6EC355302EEF4FE0DB /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				4EAFD2D7440A33A6CC2ED331 /* Alamofire+Codable.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		4EAFDAAC5974B4B0376FCFBE /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +145,6 @@
 		4EAFDD78708F95188A1B351B /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				4EAFDA6EC355302EEF4FE0DB /* Extensions */,
 				66BA6069215689910046AE0E /* APIClient.swift */,
 				66BA6067215689780046AE0E /* RESTAPIClient.swift */,
 			);
@@ -378,7 +367,6 @@
 				66813B9F21373AA200CBBE46 /* AppDelegate.swift in Sources */,
 				4EAFD9E17C1C4DF95F13D0A0 /* URL+Required.swift in Sources */,
 				4EAFD1E7B367A658CD133E96 /* ChannelsViewController.swift in Sources */,
-				4EAFDCB3C2037C9D549C0947 /* Alamofire+Codable.swift in Sources */,
 				66BA606A215689910046AE0E /* APIClient.swift in Sources */,
 				66BA605D215685530046AE0E /* NetworkAuthService.swift in Sources */,
 				66BA605B215685450046AE0E /* AuthService.swift in Sources */,
