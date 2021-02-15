@@ -17,7 +17,7 @@ class RESTAPIClient: APIClient {
 
     private class DomruServerTrustPolicyManager: ServerTrustManager {
         override func serverTrustEvaluator(forHost host: String) throws -> ServerTrustEvaluating? {
-            DisabledEvaluator()
+            DisabledTrustEvaluator()
         }
     }
 

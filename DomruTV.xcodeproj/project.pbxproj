@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,9 +19,14 @@
 		4EAFDFAC434EB7D7D66A18D7 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD90B5F3A6D90CB19F1AC /* AuthResponse.swift */; };
 		4EAFDFADDEB7BBF1DAD22A03 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAFD69BDE1B9DA02BDA4481 /* Result.swift */; };
 		664DCC422157C41700DB6759 /* ChannelsPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664DCC412157C41700DB6759 /* ChannelsPlayerViewController.swift */; };
+		6679EAF325DB200F0015C6F9 /* AlamofireImage.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6679EAF025DB200F0015C6F9 /* AlamofireImage.xcframework */; };
+		6679EAF425DB200F0015C6F9 /* AlamofireImage.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6679EAF025DB200F0015C6F9 /* AlamofireImage.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6679EAF525DB200F0015C6F9 /* Swinject.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6679EAF125DB200F0015C6F9 /* Swinject.xcframework */; };
+		6679EAF625DB200F0015C6F9 /* Swinject.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6679EAF125DB200F0015C6F9 /* Swinject.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6679EAF725DB20100015C6F9 /* Alamofire.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6679EAF225DB200F0015C6F9 /* Alamofire.xcframework */; };
+		6679EAF825DB20100015C6F9 /* Alamofire.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6679EAF225DB200F0015C6F9 /* Alamofire.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		66813B9F21373AA200CBBE46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66813B9E21373AA200CBBE46 /* AppDelegate.swift */; };
 		66813BA621373AA300CBBE46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66813BA521373AA300CBBE46 /* Assets.xcassets */; };
-		66813BAF21373F0100CBBE46 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66813BAE21373F0100CBBE46 /* Alamofire.framework */; };
 		66AF87F7213C8598009AF52C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF87F6213C8598009AF52C /* AuthViewController.swift */; };
 		66BA605921566C550046AE0E /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66BA605821566C550046AE0E /* Auth.storyboard */; };
 		66BA605B215685450046AE0E /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BA605A215685450046AE0E /* AuthService.swift */; };
@@ -33,13 +38,27 @@
 		66BA606A215689910046AE0E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BA6069215689910046AE0E /* APIClient.swift */; };
 		66BA606C2156C8950046AE0E /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BA606B2156C8950046AE0E /* AppConfigurator.swift */; };
 		66BA606E2156C8E40046AE0E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BA606D2156C8E40046AE0E /* AppCoordinator.swift */; };
-		66BA60702156D41C0046AE0E /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66BA606F2156D41C0046AE0E /* Swinject.framework */; };
 		66BA60732156D4FD0046AE0E /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BA60722156D4FD0046AE0E /* Storyboard.swift */; };
 		66BA60772156D9270046AE0E /* ChannelsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BA60762156D9270046AE0E /* ChannelsCoordinator.swift */; };
 		66BA60792156D9460046AE0E /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BA60782156D9460046AE0E /* AuthCoordinator.swift */; };
 		66CA675C213C45580021E6B5 /* ChannelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CA675B213C45580021E6B5 /* ChannelCollectionViewCell.swift */; };
-		66CA675E213C48CE0021E6B5 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66CA675D213C48CE0021E6B5 /* AlamofireImage.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6679EAF925DB20100015C6F9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6679EAF825DB20100015C6F9 /* Alamofire.xcframework in Embed Frameworks */,
+				6679EAF625DB200F0015C6F9 /* Swinject.xcframework in Embed Frameworks */,
+				6679EAF425DB200F0015C6F9 /* AlamofireImage.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4EAFD03FD5C209EAE2BDE0D2 /* DeviceTokenResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTokenResponse.swift; sourceTree = "<group>"; };
@@ -54,11 +73,13 @@
 		4EAFD90B5F3A6D90CB19F1AC /* AuthResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		4EAFDF90274FE72F7C7023E3 /* ChannelsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsResponse.swift; sourceTree = "<group>"; };
 		664DCC412157C41700DB6759 /* ChannelsPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsPlayerViewController.swift; sourceTree = "<group>"; };
+		6679EAF025DB200F0015C6F9 /* AlamofireImage.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AlamofireImage.xcframework; path = Carthage/Build/AlamofireImage.xcframework; sourceTree = "<group>"; };
+		6679EAF125DB200F0015C6F9 /* Swinject.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Swinject.xcframework; path = Carthage/Build/Swinject.xcframework; sourceTree = "<group>"; };
+		6679EAF225DB200F0015C6F9 /* Alamofire.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Alamofire.xcframework; path = Carthage/Build/Alamofire.xcframework; sourceTree = "<group>"; };
 		66813B9B21373AA200CBBE46 /* DomruTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DomruTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66813B9E21373AA200CBBE46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66813BA521373AA300CBBE46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66813BA721373AA300CBBE46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66813BAE21373F0100CBBE46 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/tvOS/Alamofire.framework; sourceTree = "<group>"; };
 		66AF87F6213C8598009AF52C /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		66BA605821566C550046AE0E /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		66BA605A215685450046AE0E /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -70,12 +91,10 @@
 		66BA6069215689910046AE0E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		66BA606B2156C8950046AE0E /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 		66BA606D2156C8E40046AE0E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		66BA606F2156D41C0046AE0E /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/tvOS/Swinject.framework; sourceTree = "<group>"; };
 		66BA60722156D4FD0046AE0E /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		66BA60762156D9270046AE0E /* ChannelsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsCoordinator.swift; sourceTree = "<group>"; };
 		66BA60782156D9460046AE0E /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		66CA675B213C45580021E6B5 /* ChannelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCollectionViewCell.swift; sourceTree = "<group>"; };
-		66CA675D213C48CE0021E6B5 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/tvOS/AlamofireImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +102,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66813BAF21373F0100CBBE46 /* Alamofire.framework in Frameworks */,
-				66CA675E213C48CE0021E6B5 /* AlamofireImage.framework in Frameworks */,
-				66BA60702156D41C0046AE0E /* Swinject.framework in Frameworks */,
+				6679EAF725DB20100015C6F9 /* Alamofire.xcframework in Frameworks */,
+				6679EAF525DB200F0015C6F9 /* Swinject.xcframework in Frameworks */,
+				6679EAF325DB200F0015C6F9 /* AlamofireImage.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,9 +207,9 @@
 		66813BAD21373F0100CBBE46 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				66BA606F2156D41C0046AE0E /* Swinject.framework */,
-				66CA675D213C48CE0021E6B5 /* AlamofireImage.framework */,
-				66813BAE21373F0100CBBE46 /* Alamofire.framework */,
+				6679EAF225DB200F0015C6F9 /* Alamofire.xcframework */,
+				6679EAF025DB200F0015C6F9 /* AlamofireImage.xcframework */,
+				6679EAF125DB200F0015C6F9 /* Swinject.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -263,7 +282,7 @@
 				66813B9721373AA200CBBE46 /* Sources */,
 				66813B9821373AA200CBBE46 /* Frameworks */,
 				66813B9921373AA200CBBE46 /* Resources */,
-				66813BB021373F2A00CBBE46 /* Carthage */,
+				6679EAF925DB20100015C6F9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -281,7 +300,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Svetoslav Karasev";
 				TargetAttributes = {
 					66813B9A21373AA200CBBE46 = {
@@ -321,26 +340,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		66813BB021373F2A00CBBE46 /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/tvOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/tvOS/AlamofireImage.framework",
-				"$(SRCROOT)/Carthage/Build/tvOS/Swinject.framework",
-			);
-			name = Carthage;
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireImage.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Swinject.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
 		66813BB12137416900CBBE46 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -420,6 +419,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -449,7 +449,7 @@
 				SDKROOT = appletvos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TVOS_DEPLOYMENT_TARGET = 11.4;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 			};
 			name = Debug;
 		};
@@ -479,6 +479,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -501,7 +502,7 @@
 				SDKROOT = appletvos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				TVOS_DEPLOYMENT_TARGET = 11.4;
+				TVOS_DEPLOYMENT_TARGET = 12.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -514,10 +515,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6WCU73Y7FL;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/tvOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = DomruTV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -539,10 +537,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6WCU73Y7FL;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/tvOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = DomruTV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
