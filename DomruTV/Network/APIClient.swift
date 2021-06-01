@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol APIClient: class {
+protocol APIClient: AnyObject {
     var authToken: String? { get set }
     func getUnboundedToken(_ completion: @escaping (Result<DeviceTokenResponse, DomruTVError>) -> Void)
     func auth(login: String, password: String, completion: @escaping (Result<AuthResponse, DomruTVError>) -> Void)
