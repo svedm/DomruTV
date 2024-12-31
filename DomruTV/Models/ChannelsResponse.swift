@@ -33,6 +33,7 @@ struct ChannelsResponse: Decodable {
                 case smartTvBanner = "3_smarttv_asset_poster_banner_showcase_blueprint"
                 case videoSlider = "video_library_slider_image"
                 case newDesignChannelLogoBlueprint = "newdesign_channel_logo_blueprint"
+                case newDesignPackagePosterBlueprint = "newdesign_package_poster_blueprint"
             }
         }
     }
